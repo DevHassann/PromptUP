@@ -11,6 +11,15 @@ Welcome to PromptUp, the cutting-edge AI Prompt Selling Marketplace designed to 
 * Authentication: Secure user authentication and management with Clerk.
 * Scalability: Robust architecture designed for scalability and performance.
 
+## Screenshots
+### Marketplace Overview
+
+### Prompt Details
+
+### Admin Dashboard
+
+### User Profile
+
 ## Features in Detail
 ### AI Prompt Marketplace
 * Create and Sell Prompts: Easily create AI prompts and list them for sale on the marketplace.
