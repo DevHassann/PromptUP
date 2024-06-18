@@ -11,6 +11,14 @@ Welcome to PromptUp, the cutting-edge AI Prompt Selling Marketplace designed to 
 * Authentication: Secure user authentication and management with Clerk.
 * Scalability: Robust architecture designed for scalability and performance.
 
+## Languages, Frameworks, and Libraries
+* ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) **Next.js**: A React framework for building fast and user-friendly web applications.
+* ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+* ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white) **Tailwind CSS**: A utility-first CSS framework for rapidly building custom user interfaces.
+* ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white) **Prisma**: A next-generation ORM for Node.js and TypeScript.
+* ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) **MongoDB**: A document database with the scalability and flexibility that you want with the querying and indexing that you need.
+* ![Clerk](https://img.shields.io/badge/Clerk-512BD4?style=for-the-badge&logo=clerk&logoColor=white) **Clerk**: User management, authentication, and security for modern web applications.
+
 ## Screenshots
 ### Marketplace Overview
 
