@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --heading: "DM Sans", sans-serif;
+  --body: "Nunito", sans-serif;
+
+  --main-theme: #030015;
+  --seondary-theme: #5fec46;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--main-theme) !important;
+  font-family: var(--body);
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: clip;
+  color: #fff;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
