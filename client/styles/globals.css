@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,7 @@
   --heading: "DM Sans", sans-serif;
   --body: "Nunito", sans-serif;
 
-  --main-theme: #030015;
+  --main-theme: #000000;
   --seondary-theme: #5fec46;
 }
 

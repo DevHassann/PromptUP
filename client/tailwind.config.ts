@@ -22,7 +22,7 @@ const config: Config = {
         body: "'Nunito', sans-serif",
       },
       colors: {
-        mainTheme: "#030015",
+        mainTheme: "#000000",
         secondaryTheme: "#5fec46",
       },
     },

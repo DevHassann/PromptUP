@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
+  images: {
+    domains: ["pixner.net", "res.cloudinary.com"],
+  },
+  swcMinify: true,
+};
 
 export default nextConfig;
