@@ -1,5 +1,8 @@
+import { User } from "@clerk/nextjs/server";
+
 export interface HeaderProps {
   activeItem: number;
+  user: User | null;
 }
 
 export interface HeaderPagesNavigationProps {
@@ -31,4 +34,20 @@ export interface ShopDataProps {
   createdAt: Date;
   updatedAt: Date;
   userId: string;
+}
+
+export interface DropdownMenuProps {
+  user: User | null;
+  setOpen: (open: boolean) => void;
+  handleProfile: () => void;
+  isSellerExist?: boolean;
+}
+
+export interface SidebarMenuProps {
+  user: User | null;
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  isSellerExist?: boolean;
+  activeItem: number;
+  handleProfile: () => void;
 }

@@ -17,15 +17,16 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
   return (
     <Card
       radius="lg"
-      className="w-full lg:w-[31%] sm:w-[46%] 2xl:w-[23%] max-h-[410px] p-4 bg-white m-3"
+      className="w-full lg:w-[31%] sm:w-[46%] 2xl:w-[23%] max-h-[410px] p-4 prompt-card-background border-2 border-white m-3"
     >
       <div className="relative">
         <Image
           src={prompt?.promptImage}
-          alt=""
+          alt="Prompt Image"
           className="w-full !max-h-[200px] object-cover rounded-lg"
           width={300}
           height={300}
+          priority
         />
         <div className="absolute bottom-2 left-2">
           <div className="w-max bg-black duration-300 transition-opacity text-white p-[10px] items-center flex rounded-xl">
@@ -35,6 +36,7 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
                 width={25}
                 height={25}
                 alt={prompt?.category}
+                priority
               />
             ) : (
               <>
@@ -44,6 +46,7 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
                     width={25}
                     height={25}
                     alt={prompt?.category}
+                    priority
                   />
                 ) : (
                   <>
@@ -53,6 +56,7 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
                         width={25}
                         height={25}
                         alt={prompt?.category}
+                        priority
                       />
                     ) : (
                       <>
@@ -62,6 +66,7 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
                             width={25}
                             height={25}
                             alt={prompt?.category}
+                            priority
                           />
                         ) : null}
                       </>
@@ -77,12 +82,14 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
         </div>
       </div>
       <div className="w-full flex justify-between py-4">
-        <h3 className={`${styles.label} text-[18px] font-[700] text-black`}>
+        <h3 className={`${styles.label} text-[18px] font-[700] text-white`}>
           {prompt?.PromptName}
         </h3>
-        <p className={`${styles.paragraph} text-black font-[700]`}>${prompt?.price}</p>
+        <p className={`${styles.paragraph} text-white font-[700]`}>
+          ${prompt?.price}
+        </p>
       </div>
-      <Divider className="bg-black mb-3" />
+      <Divider className="bg-white mb-3" />
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
           <Avatar src="https://pixner.net/aikeu/assets/images/banner/large-slider/four.png" />
@@ -95,7 +102,7 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
       <br />
       <Link href={`/prompt/${prompt.id}`} className="w-full">
         <div
-          className={`${styles.button} !py-2 !px-3 text-center mb-3 w-full !text-black bg-white border-2 border-black md:duration-500 md:transition-all md:ease-in-out font-[600]`}
+          className={`${styles.button} !py-2 !px-3 text-center mb-3 w-full !text-black bg-white border-2 border-black md:duration-500 md:transition-all md:ease-in-out font-[700]`}
         >
           Get Prompts
         </div>

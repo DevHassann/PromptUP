@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import MetaData from "../functions/meta-data";
 
@@ -11,10 +14,39 @@ import FutureSection from "../components/routes/home/future-setion";
 import PartnerSection from "../components/routes/home/partners-section";
 import Seperator from "../components/common/seperator";
 import Footer from "../components/layouts/footer";
+import Loader from "../components/common/loader";
 
 import { HomePageProps } from "../interfaces/pages.interface";
 
 const page = (props: HomePageProps) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+    }
+  }, [isMounted]);
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("/api/me")
+      .then((res) => {
+        setUser(res.data.user);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <>
       <MetaData
@@ -23,18 +55,27 @@ const page = (props: HomePageProps) => {
         keywords="AI Prompt Marketplace, AI, AI Prompts, Marketplace"
       />
 
-      <Header activeItem={0} />
-      <HeroSection />
-      <AboutSection />
-      <LatesPromptSection />
-      <BestSellerSection />
-      <FutureSection />
-      <Seperator />
-      <PartnerSection />
-      <br />
-      <br />
-      <br />
-      <Footer />
+      {loading ? (
+        <>
+          <Loader />
+        </>
+      ) : (
+        <>
+          <Header activeItem={0} user={user} />
+          <HeroSection />
+          <Seperator />
+          <AboutSection />
+          <LatesPromptSection />
+          <FutureSection />
+          <BestSellerSection />
+          <PartnerSection />
+          <br />
+          <br />
+          <br />
+          <br />
+          <Footer />
+        </>
+      )}
     </>
   );
 };

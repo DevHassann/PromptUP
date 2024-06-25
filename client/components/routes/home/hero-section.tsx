@@ -34,10 +34,11 @@ const HeroSection = () => {
         <div className="hidden lg:block lg:mt-5">
           <Image
             src={line}
-            alt=""
+            alt="line"
             className="absolute"
             width={2000}
             height={2}
+            priority
           />
         </div>
         <div className="w-[100vw] mb-5 md:mb-20 relative">
@@ -51,6 +52,7 @@ const HeroSection = () => {
                   className="md:m-4 w-[200px] m-2 md:w-[500px] rounded-[20px]"
                   width={500}
                   height={300}
+                  priority
                 />
               ))}
             </MarQuee>
@@ -63,6 +65,7 @@ const HeroSection = () => {
                   className="md:m-4 w-[200px] m-2 md:w-[500px] rounded-[20px]"
                   width={500}
                   height={300}
+                  priority
                 />
               ))}
             </MarQuee>

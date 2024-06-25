@@ -10,15 +10,16 @@ import FutureSectionImage from "../../../public/images/future-section-image.png"
 
 const FutureSection = () => {
   return (
-    <div className="w-[95%] lg:w-[90%] xl:w-[80%] 2xl:w-[75%] m-auto mt-[9rem] max-lg:mt-[5rem]">
+    <div className="w-[95%] lg:w-[90%] xl:w-[80%] 2xl:w-[75%] m-auto my-[12rem] max-lg:my-[2rem]">
       <div className="w-full relative p-4 lg:p-[unset] grid lg:grid-cols-2 py-8">
         <div className="col-span-1 translate-x-[12%] max-lg:hidden">
           <Image
             src={FutureSectionImage}
             width={800}
             height={500}
-            alt=""
+            alt="Future"
             className="lg:w-[90%] lg:ml-[-50px] 2xl:ml-[-90px]"
+            priority
           />
         </div>
         <div className="col-span-1 w-full flex justify-center items-center">
@@ -42,8 +43,9 @@ const FutureSection = () => {
             src={FutureSectionImage}
             width={800}
             height={500}
-            alt=""
+            alt="Future"
             className="w-[90%]"
+            priority
           />
         </div>
       </div>

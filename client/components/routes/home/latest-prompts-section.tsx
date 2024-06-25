@@ -8,7 +8,7 @@ import { styles } from "../../../styles/partials";
 
 const LatesPromptSection = () => {
   return (
-    <div className="w-[95%] lg:w-[90%] xl:w-[80%] 2xl:w-[75%] m-auto mt-4 max-lg:mt-8">
+    <div className="w-[95%] lg:w-[90%] xl:w-[80%] 2xl:w-[75%] m-auto my-[1rem] max-lg:my-[2rem]">
       <h1 className={`${styles.heading} p-2`}>Latest Prompts</h1>
       <div className="w-full flex flex-wrap mt-5">
         {PromptCardFakeData.map((item: any) => (

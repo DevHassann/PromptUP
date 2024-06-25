@@ -21,3 +21,17 @@
     rgba(0, 0, 0, 0.2)
   );
 }
+
+.prompt-card-background {
+  background-color: #166d3b;
+  background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+}
+
+.loader {
+  border: 4px solid #5fec46;
+  border-top: 4px solid #1f2937;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
