@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 import HeaderPagesNavigation from "./header-pages-navigation";
@@ -12,7 +13,6 @@ import { UserProfile } from "@clerk/nextjs";
 import { HeaderProps } from "../../interfaces/components.interface";
 
 import Logo from "../../public/logo/logo.svg";
-import Image from "next/image";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoPersonSharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";

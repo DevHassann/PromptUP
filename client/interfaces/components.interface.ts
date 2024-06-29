@@ -52,3 +52,7 @@ export interface SidebarMenuProps {
   activeItem: number;
   handleProfile: () => void;
 }
+
+export interface ShopSidebarProps {
+  active: number;
+}
