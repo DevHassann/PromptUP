@@ -27,6 +27,12 @@
   background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
 }
 
+.create-shop-blur-background {
+  background-color: transparent;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
 .loader {
   border: 4px solid #5fec46;
   border-top: 4px solid #1f2937;

@@ -18,10 +18,11 @@ import Loader from "../components/common/loader";
 
 import { HomePageProps } from "../interfaces/pages.interface";
 
-const page = (props: HomePageProps) => {
+const Page = (props: HomePageProps) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isSellerExist, setIsSellerExist] = useState(false);
 
   useEffect(() => {
     if (!isMounted) {
@@ -35,6 +36,7 @@ const page = (props: HomePageProps) => {
       .get("/api/me")
       .then((res) => {
         setUser(res.data.user);
+        setIsSellerExist(res.data.shop ? true : false);
         setLoading(false);
       })
       .catch((err) => {
@@ -61,7 +63,7 @@ const page = (props: HomePageProps) => {
         </>
       ) : (
         <>
-          <Header activeItem={0} user={user} />
+          <Header activeItem={0} user={user} isSellerExist={isSellerExist} />
           <HeroSection />
           <Seperator />
           <AboutSection />
@@ -80,4 +82,4 @@ const page = (props: HomePageProps) => {
   );
 };
 
-export default page;
+export default Page;

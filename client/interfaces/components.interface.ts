@@ -3,6 +3,7 @@ import { User } from "@clerk/nextjs/server";
 export interface HeaderProps {
   activeItem: number;
   user: User | null;
+  isSellerExist: boolean;
 }
 
 export interface HeaderPagesNavigationProps {

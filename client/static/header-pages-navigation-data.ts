@@ -16,7 +16,7 @@ export const HeaderPagesNavigationData = [
     href: "/contact",
   },
   {
-    title: "Policy",
-    href: "/policy",
+    title: "Start Selling",
+    href: "/create-shop",
   },
 ];

@@ -18,11 +18,10 @@ import { IoPersonSharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
-const Header = ({ user, activeItem }: HeaderProps) => {
+const Header = ({ user, activeItem, isSellerExist }: HeaderProps) => {
   const [active, setactive] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeProfile, setActiveProfile] = useState(false);
-  const [isSellerExist, setIsSellerExist] = useState(false);
 
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => {
@@ -47,9 +46,9 @@ const Header = ({ user, activeItem }: HeaderProps) => {
         }`}
       >
         <div className="hidden lg:w-[95%] mx-auto lg:flex items-center justify-between">
-          <Link href={"/"} className="flex items-center gap-2">
+          <Link href={"/"} className="flex items-center gap-2 cursor-pointer">
             <Image src={Logo} className="w-[50px]" alt="PromptUp" priority />
-            <h1 className="font-heading text-3xl cursor-pointer text-secondaryTheme -translate-y-[3px]">
+            <h1 className="font-heading text-3xl cursor-pointer text-secondaryTheme translate-y-[2px]">
               <span className="text-white">Prompt</span>Up
             </h1>
           </Link>
@@ -102,7 +101,7 @@ const Header = ({ user, activeItem }: HeaderProps) => {
           <div>
             <Link href="/" className="flex items-center gap-2">
               <Image src={Logo} className="w-[45px]" alt="PromptUp" priority />
-              <h1 className="font-heading text-3xl cursor-pointer text-secondaryTheme -translate-y-[3px]">
+              <h1 className="font-heading text-3xl cursor-pointer text-secondaryTheme translate-y-[2px]">
                 <span className="text-white">Prompt</span>Up
               </h1>
             </Link>
